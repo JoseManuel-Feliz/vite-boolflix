@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/assets/vue.svg",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1727129311901,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1727129344900,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,6 @@\n+<svg width=\"100\" height=\"100\" xmlns=\"http://www.w3.org/2000/svg\">\r\n+  <rect width=\"100\" height=\"100\" fill=\"black\"/>\r\n+  <text x=\"50%\" y=\"50%\" dominant-baseline=\"middle\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"80\" fill=\"red\" font-weight=\"bold\">\r\n+    B\r\n+  </text>\r\n+</svg>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1727129631935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,6 @@\n-<svg width=\"100\" height=\"100\" xmlns=\"http://www.w3.org/2000/svg\">\r\n+<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100\" height=\"100\" viewBox=\"0 0 100 100\">\r\n   <rect width=\"100\" height=\"100\" fill=\"black\"/>\r\n-  <text x=\"50%\" y=\"50%\" dominant-baseline=\"middle\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"80\" fill=\"red\" font-weight=\"bold\">\r\n-    B\r\n+  <text x=\"50%\" y=\"50%\" dominant-baseline=\"middle\" text-anchor=\"middle\" font-family=\"Arial Black, sans-serif\" font-size=\"70\" fill=\"red\" font-weight=\"900\">\r\n+    Booflix\r\n   </text>\r\n-</svg>\n-<svg width=\"100\" height=\"100\" xmlns=\"http://www.w3.org/2000/svg\">\r\n-  <rect width=\"100\" height=\"100\" fill=\"black\"/>\r\n-  <text x=\"50%\" y=\"50%\" dominant-baseline=\"middle\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"80\" fill=\"red\" font-weight=\"bold\">\r\n-    B\r\n-  </text>\r\n </svg>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1727129657421,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100\" height=\"100\" viewBox=\"0 0 100 100\">\r\n   <rect width=\"100\" height=\"100\" fill=\"black\"/>\r\n   <text x=\"50%\" y=\"50%\" dominant-baseline=\"middle\" text-anchor=\"middle\" font-family=\"Arial Black, sans-serif\" font-size=\"70\" fill=\"red\" font-weight=\"900\">\r\n-    Booflix\r\n+    B\r\n   </text>\r\n </svg>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1727129718732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100\" height=\"100\" viewBox=\"0 0 100 100\">\r\n   <rect width=\"100\" height=\"100\" fill=\"black\"/>\r\n-  <text x=\"50%\" y=\"50%\" dominant-baseline=\"middle\" text-anchor=\"middle\" font-family=\"Arial Black, sans-serif\" font-size=\"70\" fill=\"red\" font-weight=\"900\">\r\n+  <text x=\"50%\" y=\"50%\" dominant-baseline=\"middle\" text-anchor=\"middle\" font-family=\"Arial Black, sans-serif\" font-size=\"70\" fill=\"red\" font-weight=\"900\" border-radius=\"5px\">\r\n     B\r\n   </text>\r\n </svg>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1727129735462,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,6 @@\n+<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100\" height=\"100\" viewBox=\"0 0 100 100\">\r\n+  <rect width=\"100\" height=\"100\" fill=\"black\"/>\r\n+  <text x=\"50%\" y=\"50%\" dominant-baseline=\"middle\" text-anchor=\"middle\" font-family=\"Arial Black, sans-serif\" font-size=\"70\" fill=\"red\" font-weight=\"900\" border-radius=\"50px\">\r\n+    B\r\n+  </text>\r\n+</svg>\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1727129758326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,12 +1,6 @@\n <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100\" height=\"100\" viewBox=\"0 0 100 100\">\r\n   <rect width=\"100\" height=\"100\" fill=\"black\"/>\r\n-  <text x=\"50%\" y=\"50%\" dominant-baseline=\"middle\" text-anchor=\"middle\" font-family=\"Arial Black, sans-serif\" font-size=\"70\" fill=\"red\" font-weight=\"900\" border-radius=\"50px\">\r\n+  <text x=\"50%\" y=\"50%\" dominant-baseline=\"middle\" text-anchor=\"middle\" font-family=\"Arial Black, sans-serif\" font-size=\"70\" fill=\"red\" font-weight=\"900\">\r\n     B\r\n   </text>\r\n-</svg>\n-<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"100\" height=\"100\" viewBox=\"0 0 100 100\">\r\n-  <rect width=\"100\" height=\"100\" fill=\"black\"/>\r\n-  <text x=\"50%\" y=\"50%\" dominant-baseline=\"middle\" text-anchor=\"middle\" font-family=\"Arial Black, sans-serif\" font-size=\"70\" fill=\"red\" font-weight=\"900\" border-radius=\"5px\">\r\n-    B\r\n-  </text>\r\n </svg>\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1727129311901,
+            "name": "Commit-0",
+            "content": "<svg width=\"100\" height=\"100\" xmlns=\"http://www.w3.org/2000/svg\">\r\n  <rect width=\"100\" height=\"100\" fill=\"black\"/>\r\n  <text x=\"50%\" y=\"50%\" dominant-baseline=\"middle\" text-anchor=\"middle\" font-family=\"Arial, sans-serif\" font-size=\"80\" fill=\"red\" font-weight=\"bold\">\r\n    B\r\n  </text>\r\n</svg>"
+        }
+    ]
+}

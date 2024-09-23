@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/js/main.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1727130610810,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1727130620040,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,4 +1,4 @@\n import { createApp } from 'vue'\n-import App from '..App.vue'\n+import App from '../App.vue'\n \n createApp(App).mount('#app')\n"
+                }
+            ],
+            "date": 1727130610810,
+            "name": "Commit-0",
+            "content": "import { createApp } from 'vue'\nimport App from '..App.vue'\n\ncreateApp(App).mount('#app')\n"
+        }
+    ]
+}
