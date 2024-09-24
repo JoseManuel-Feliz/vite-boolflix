@@ -1,17 +1,21 @@
 <script>
 export default {
+    name: 'AppMain',
     data() {
         return {
 
         }
+    },
+    props: {
+        filteredMovies: Array
     },
 }
 </script>
 
 <template>
     <main>
-
-        <h1>jijijiji</h1>
+        <div v-for="movie in filteredMovies" :key="movie.id">
+        </div>
     </main>
 </template>
 

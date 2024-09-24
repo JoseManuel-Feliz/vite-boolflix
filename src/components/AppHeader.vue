@@ -1,8 +1,9 @@
 <script>
 export default {
+    name: 'HeaderApp',
     data() {
         return {
-
+            textToSearch: ''
         }
     }
 }
@@ -12,8 +13,9 @@ export default {
     <header>
         <h1>Boolflix</h1>
         <div>
-            <input type="text" placeholder="what you want to watch?">
-            <button>search</button>
+            <input v-model="textToSearch" type="text" placeholder="what you want to watch?"
+                @keyup.enter="$emit('searchByTitle', textToSearch)">
+            <button @click="$emit('searchByTitle', textToSearch)">search</button>
         </div>
     </header>
 </template>
