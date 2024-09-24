@@ -12,8 +12,8 @@ export default {
     <header>
         <h1>Boolflix</h1>
         <div>
-            <input type="text" name="" id="">
-            <button>jajaja</button>
+            <input type="text" placeholder="what you want to watch?">
+            <button>search</button>
         </div>
     </header>
 </template>
