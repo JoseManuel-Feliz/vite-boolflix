@@ -14,8 +14,31 @@ export default {
 
 <template>
     <main>
-        <div v-for="movie in filteredMovies" :key="movie.id">
-        </div>
+        <ul>
+
+
+
+
+            <li v-for="movie in filteredMovies" :key="movie.id">
+
+                <p>
+                    Titolo:
+                    <span>{{ movie.title }}</span>
+                </p>
+                <p>
+                    Titolo Originale:
+                    <span>{{ movie.original_title }}</span>
+                </p>
+                <p>
+                    Lingua:
+                    <span>{{ movie.original_language }}</span>
+                </p>
+                <p>
+                    Voto:
+                    <span>{{ movie.vote_average }}</span>
+                </p>
+            </li>
+        </ul>
     </main>
 </template>
 

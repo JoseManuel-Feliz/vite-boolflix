@@ -16,8 +16,8 @@ export default {
         )
         .then((response) => {
           this.filteredMovies = response.data.results
+          console.dir(this.filteredMovies)
         })
-      console.log(this.filteredMovies)
       return this.filteredMovies
     }
 
