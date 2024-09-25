@@ -1,8 +1,13 @@
 <script>
+
+import { store } from '../js/store.js'
+
 export default {
     name: 'HeaderApp',
+    props: {},
     data() {
         return {
+            store,
             textToSearch: ''
         }
     }
@@ -15,12 +20,12 @@ export default {
         <div>
             <input v-model="textToSearch" type="text" placeholder="what you want to watch?"
                 @keyup.enter="$emit('searchByTitle', textToSearch)">
-            <button @click="$emit('searchByTitle', textToSearch)">search</button>
+            <button @click=" $emit('searchByTitle', textToSearch)">search</button>
         </div>
     </header>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
 header {
     height: 80px;
     border: dashed 3px red;

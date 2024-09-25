@@ -1,15 +1,37 @@
 <script>
+import { store } from '../js/store.js'
+
 export default {
     name: 'AppMain',
+    props: {},
     data() {
         return {
-
+            store,
+            noflag: 'xx',
         }
     },
     props: {
-        filteredMovies: Array
+
     },
+    computed: {
+        /*  noflag() {
+             !this.getLangFlag.includes((store.filteredMovies.original_language))
+             return this.noflag
+         },
+              */
+    },
+    methods: {
+        getLangFlag(lang) {
+            const flagsToSet = {
+                en: 'gb', pt: 'br', zh: 'cn', ja: 'jp', ko: 'kr', hi: 'in', or: 'in', cs: 'cz'
+            }
+            const isoCode = flagsToSet[lang] || lang
+            return isoCode
+        }
+    }
+
 }
+
 </script>
 
 <template>
@@ -19,7 +41,7 @@ export default {
 
 
 
-            <li v-for="movie in filteredMovies" :key="movie.id">
+            <li v-for="movie in store.filteredMovies" :key="movie.id">
 
                 <p>
                     Titolo:
@@ -31,7 +53,7 @@ export default {
                 </p>
                 <p>
                     Lingua:
-                    <span>{{ movie.original_language }}</span>
+                    <span :class="`fi fi-${(getLangFlag(movie.original_language))}`"></span>
                 </p>
                 <p>
                     Voto:
@@ -42,8 +64,16 @@ export default {
     </main>
 </template>
 
-<style scoped>
+<style lang=scss scoped>
 main {
     border: 3px dashed red;
+
+    .fi {
+        display: inline-block;
+        height: 30px;
+        width: 35px;
+        background-size: contain;
+        filter: drop-shadow(1px 1px #444343)
+    }
 }
 </style>
