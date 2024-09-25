@@ -1,9 +1,14 @@
 <script>
-import { store } from '../js/store.js'
+import { store } from '../js/store';
+import StreamingMedia from './StreamingMedia.vue';
+
 
 export default {
     name: 'AppMain',
     props: {},
+    components: {
+        StreamingMedia,
+    },
     data() {
         return {
             store,
@@ -11,7 +16,6 @@ export default {
         }
     },
     props: {
-
     },
     computed: {
         /*  noflag() {
@@ -37,29 +41,7 @@ export default {
 <template>
     <main>
         <ul>
-
-
-
-
-            <li v-for="movie in store.filteredMovies" :key="movie.id">
-
-                <p>
-                    Titolo:
-                    <span>{{ movie.title }}</span>
-                </p>
-                <p>
-                    Titolo Originale:
-                    <span>{{ movie.original_title }}</span>
-                </p>
-                <p>
-                    Lingua:
-                    <span :class="`fi fi-${(getLangFlag(movie.original_language))}`"></span>
-                </p>
-                <p>
-                    Voto:
-                    <span>{{ movie.vote_average }}</span>
-                </p>
-            </li>
+            <StreamingMedia />
         </ul>
     </main>
 </template>

@@ -1,6 +1,6 @@
 <script>
 
-import { store } from '../js/store.js'
+import { store } from '../js/store';
 
 export default {
     name: 'HeaderApp',

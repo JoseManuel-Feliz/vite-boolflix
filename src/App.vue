@@ -1,14 +1,14 @@
 <script>
-import axios from 'axios'
-import { store } from './js/store.js'
+import axios from 'axios';
+import { store } from './js/store';
+
 import AppHeader from "./components/AppHeader.vue"
 import AppMain from "./components/AppMain.vue"
 export default {
   data() {
     return {
-      name: 'App',
       store,
-
+      name: 'App',
     }
   },
   components: {
@@ -23,31 +23,19 @@ export default {
         )
         .then((response) => {
 
-          store.filteredMovies = response.data.results
-          /* response.data.results.forEach(movie => {
-            store.push(
-              {
-                title: movie.title,
-                original_title: movie.original_title,
-                lang: movie.original_language,
-                vote_average: movie.vote_average,
-              })
-          }); 
-          */
+          store.filteredMovies = response.data.results;
+
+
         });
       console.dir(store.filteredMovies)
 
     },
+
+    created() {
+
+    },
   },
-
-
-
-
-
-}
-
-
-
+};
 </script>
 
 <!-- @setLangFlag="setLangFlag" :flag="flag" -->
