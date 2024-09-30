@@ -7,6 +7,7 @@ export default {
     data() {
         return {
             store,
+            noflag: 'xx',
 
         }
     },
@@ -34,7 +35,7 @@ export default {
             return isoCode
         },
         log() {
-            return console.log(store.filteredMovies)
+            return store.filteredMovies, store.filteredSeries
 
         }
     }
@@ -61,6 +62,26 @@ export default {
         <p>
             Voto:
             <span>{{ movie.vote_average }}</span>
+        </p>
+    </li>
+
+    <li v-for="serie in store.filteredSeries" :key="serie.id">
+
+        <p>
+            Titolo:
+            <span>{{ serie.title }}</span>
+        </p>,
+        <p>
+            Titolo Originale:
+            <span>{{ serie.original_title }}</span>
+        </p>
+        <p>
+            Lingua:
+            <span :class="`fi fi-${(getLangFlag(serie.original_language))}`"></span>
+        </p>
+        <p>
+            Voto:
+            <span>{{ serie.vote_average }}</span>
         </p>
     </li>
 
