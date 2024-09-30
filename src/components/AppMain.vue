@@ -12,26 +12,16 @@ export default {
     data() {
         return {
             store,
-            noflag: 'xx',
+
         }
     },
     props: {
     },
     computed: {
-        /*  noflag() {
-             !this.getLangFlag.includes((store.filteredMovies.original_language))
-             return this.noflag
-         },
-              */
+
     },
     methods: {
-        getLangFlag(lang) {
-            const flagsToSet = {
-                en: 'gb', pt: 'br', zh: 'cn', ja: 'jp', ko: 'kr', hi: 'in', or: 'in', cs: 'cz'
-            }
-            const isoCode = flagsToSet[lang] || lang
-            return isoCode
-        }
+
     }
 
 }
