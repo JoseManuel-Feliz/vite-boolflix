@@ -15,8 +15,11 @@ export default {
         /*  noflag() {
              !this.getLangFlag.includes((store.filteredMovies.original_language))
              return this.noflag
-         },
-              */
+             },
+                  */
+        log() {
+            return store.filteredMovies, store.filteredSeries
+        },
     },
     methods: {
         getLangFlag(lang) {
@@ -34,23 +37,23 @@ export default {
             const isoCode = flagsToSet[lang] || lang
             return isoCode
         },
-        log() {
-            return store.filteredMovies, store.filteredSeries
-
+        toInteger(n) {
+            return Math.round(n / 2);
         }
+
     }
 }
+
 
 </script>
 
 <template>
-    <p>{{ log }}</p>
     <li v-for="movie in store.filteredMovies" :key="movie.id">
 
         <p>
             Titolo:
             <span>{{ movie.title }}</span>
-        </p>,
+        </p>
         <p>
             Titolo Originale:
             <span>{{ movie.original_title }}</span>
@@ -61,7 +64,7 @@ export default {
         </p>
         <p>
             Voto:
-            <span>{{ movie.vote_average }}</span>
+            <fa-icon v-for="star in toInteger(movie.vote_average)" icon="star" class="star text-warning" />
         </p>
 
         <img :src="`https://www.themoviedb.org/t/p/w300${movie.poster_path}`" :alt="`${movie.title} poster`" />
@@ -73,7 +76,7 @@ export default {
         <p>
             Titolo:
             <span>{{ serie.title }}</span>
-        </p>,
+        </p>
         <p>
             Titolo Originale:
             <span>{{ serie.original_title }}</span>
@@ -84,7 +87,7 @@ export default {
         </p>
         <p>
             Voto:
-            <span>{{ serie.vote_average }}</span>
+            <fa-icon v-for="star in toInteger(serie.vote_average)" icon="star" class="star text-warning" />
         </p>
 
         <img :src="`https://www.themoviedb.org/t/p/w300${serie.poster_path}`" :alt="`${serie.title} poster`" />
