@@ -9,6 +9,10 @@ export default {
     return {
       store,
       name: 'App',
+
+      apiKey: '507f1c26039a4db2566d6870a51e07fe',
+      apiURL: 'https://api.themoviedb.org/3/search/',
+
     }
   },
   components: {
@@ -16,29 +20,47 @@ export default {
     AppMain,
   },
   methods: {
-    searchByTitle(title) {
-      axios
-        .get(
-          `https://api.themoviedb.org/3/search/movie?api_key=507f1c26039a4db2566d6870a51e07fe&language=it&query=${title}`
-        )
-        .then((response) => {
+    async searchMoviesByTitle(title) {
+      const params = {
+        api_key: this.apiKey,
+        query: title,
+        language: 'it',
+      }
+      const movieURL = `${this.apiURL}movie`
+      const requestMovie = axios.get(`${movieURL}`, { params })
+      await requestMovie.then((response) => {
 
-          store.filteredMovies = response.data.results;
+        store.filteredMovies = response.data.results
+      })
+    },
+    async searchSeriesByTitle(title) {
+      const params = {
+        api_key: this.apiKey,
+        query: title,
+        language: 'it',
+      }
+      const seriesURL = `${this.apiURL}tv`
+      const requestSeries = axios.get(`${seriesURL}`, { params })
+      await requestSeries.then((response) => {
 
-
-        });
-      console.dir(store.filteredMovies)
-
+        store.filteredSeries = response.data.results
+      })
     },
 
+    async searchByTitle(title) {
+
+
+      await this.searchMoviesByTitle(title)
+      await this.searchSeriesByTitle(title)
+
+
+    },
     created() {
-
     },
-  },
-};
+  }
+}
 </script>
 
-<!-- @setLangFlag="setLangFlag" :flag="flag" -->
 
 <template>
   <AppHeader @searchByTitle="searchByTitle" />
