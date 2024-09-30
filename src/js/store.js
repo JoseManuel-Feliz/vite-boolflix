@@ -1,7 +1,8 @@
 import { reactive } from "vue";
 
 export const store = reactive({
-    filteredMovies: []
+    filteredMovies: [],
+    filteredSeries: [],
 
 });
 console.dir(store)
