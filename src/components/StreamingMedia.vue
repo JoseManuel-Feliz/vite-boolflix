@@ -63,6 +63,9 @@ export default {
             Voto:
             <span>{{ movie.vote_average }}</span>
         </p>
+
+        <img :src="`https://www.themoviedb.org/t/p/w300${movie.poster_path}`" :alt="`${movie.title} poster`" />
+
     </li>
 
     <li v-for="serie in store.filteredSeries" :key="serie.id">
@@ -83,6 +86,9 @@ export default {
             Voto:
             <span>{{ serie.vote_average }}</span>
         </p>
+
+        <img :src="`https://www.themoviedb.org/t/p/w300${serie.poster_path}`" :alt="`${serie.title} poster`" />
+
     </li>
 
 </template>
